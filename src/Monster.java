@@ -4,6 +4,8 @@ public class Monster {
     private int currentHp;
     private int maxHp;
 
+    private int experienceValue = 2000;
+
     private int attackDamage = 5;
 
     public Monster(String name) {
@@ -26,5 +28,9 @@ public class Monster {
 
     public void receiveDamage(int amount) {
         currentHp -= amount;
+    }
+
+    public int getExperienceValue() {
+        return experienceValue;
     }
 }

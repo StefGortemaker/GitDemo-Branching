@@ -21,6 +21,7 @@ public class Application {
             System.out.println(viciousMonster.getName() + " won!");
         } else {
             System.out.println(ourHero.getName() + " won!");
+            ourHero.gainExperience(viciousMonster.getExperienceValue());
         }
 
     }

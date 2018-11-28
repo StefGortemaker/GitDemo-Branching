@@ -3,6 +3,8 @@ public class Hero {
     private int currentHp;
     private int maxHp;
 
+    private int experience = 0;
+
     private int attackDamage = 10;
 
     public Hero(String name) {
@@ -29,6 +31,14 @@ public class Hero {
 
     public void receiveDamage(int amount) {
         currentHp -= amount;
+    }
+
+    public void gainExperience(int amount) {
+        experience += amount;
+    }
+
+    public int getLevel() {
+        return experience / 1000;
     }
 }
 
