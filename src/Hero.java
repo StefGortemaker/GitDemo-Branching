@@ -3,7 +3,8 @@ public class Hero {
     private int currentHp;
     private int maxHp;
 
-    private int experience = 0;
+    private int level = 0;
+    private int experienceTillNextLevel = 1000;
 
     private int attackDamage = 10;
 
@@ -34,11 +35,21 @@ public class Hero {
     }
 
     public void gainExperience(int amount) {
-        experience += amount;
+        experienceTillNextLevel -= amount;
+
+        // Add levels for the amount of xp
+        while(experienceTillNextLevel <= 0) {
+            levelUp();
+            experienceTillNextLevel += 1000;
+        }
     }
 
     public int getLevel() {
-        return experience / 1000;
+        return level;
+    }
+
+    private void levelUp() {
+        level++;
     }
 }
 
