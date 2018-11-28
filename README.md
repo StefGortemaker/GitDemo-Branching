@@ -8,6 +8,7 @@
   * How many commits are there in each branch?
 
 4. Experiment with swapping branches by clicking on the respective branches in SourceTree.
+  * There is ONE commit that is a bit "dodgy" (as in: does more than just work on the feature..). Can you find out which one?
 5. Study the changes made in the master branch after the branches were created.
 6. With the knowledge you gained from 5., try merging the "weapons" branch into the "master" branch using either IntelliJ or SourceTree (SourceTree = recommended).
   * Note that there is a merge conflict to resolve. 
