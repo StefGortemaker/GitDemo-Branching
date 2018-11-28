@@ -1,35 +1,15 @@
-public class Hero {
-    private String name;
-    private int currentHp;
-    private int maxHp;
+public class Hero extends Entity {
 
-    private int attackDamage = 10;
 
     public Hero(String name) {
-        this.name = name;
-        maxHp = 100;
-        currentHp = maxHp;
+        super(name, 100, 10);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getCurrentHp() {
-        return currentHp;
-    }
-
-    public boolean isDead() {
-        return currentHp == 0;
-    }
 
     public void attack(Monster opponent) {
-        opponent.receiveDamage(attackDamage);
+        opponent.receiveDamage(getAttackDamage());
     }
 
-    public void receiveDamage(int amount) {
-        currentHp -= amount;
-    }
 }
 
 
