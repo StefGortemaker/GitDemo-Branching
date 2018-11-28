@@ -5,6 +5,7 @@ public class Monster extends Entity {
     }
 
     public void attack(Hero opponent) {
+        System.out.println(getName() + " deals " + getAttackDamage() + " damage!");
         opponent.receiveDamage(getAttackDamage());
     }
 
