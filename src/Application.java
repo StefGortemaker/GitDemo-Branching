@@ -6,6 +6,8 @@ public class Application {
 
     public void run() {
         Hero ourHero = new Hero("Garfield");
+        Weapon nerfBat = new Weapon("NerfBat", 100);
+        ourHero.equip(nerfBat);
 
         Monster viciousMonster = new Monster("Dreadful monday morning");
 
