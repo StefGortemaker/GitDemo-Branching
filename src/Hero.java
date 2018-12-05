@@ -9,7 +9,7 @@ public class Hero extends Entity {
     public void attack(Monster opponent) {
         System.out.println(getName() + " deals " + getAttackDamage() + " damage!");
         opponent.receiveDamage(getAttackDamage());
-=======
+    }
     private int attackDamage;
 
     private Weapon equippedWeapon;
@@ -46,7 +46,6 @@ public class Hero extends Entity {
         }
 
         opponent.receiveDamage(dealtDamage);
->>>>>>> origin/weapons
     }
 
 }
